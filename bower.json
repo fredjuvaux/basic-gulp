@@ -1,0 +1,30 @@
+{
+  "name": "gulp-bower",
+  "version": "0.0.0",
+  "authors": [
+    "Fred Juvaux <contact@fredjuvaux.fr>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*",
+    "jrespond-bower": "^0.10.0",
+    "gsap": "^1.17.0",
+    "ScrollMagic": "^2.0.5",
+    "jquery-colorbox": "~1.6.3",
+    "slick-carousel": "~1.5.8"
+  },
+  "overrides": {
+    "jrespond-bower": {
+      "main": [
+        "./js/jRespond.js"
+      ]
+    }
+  }
+}

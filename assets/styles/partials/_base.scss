@@ -1,0 +1,16 @@
+/* Base styles
+------------------------------------------------------------------------------*/
+body {
+    color: $text-color;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    overflow: auto;
+}
+.hidden {
+    display: none;
+}
+.inline-block {
+    display: inline-block;
+}

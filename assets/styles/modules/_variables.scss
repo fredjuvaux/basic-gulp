@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+
+/* Variables
+-----------------------------------------------------------------*/
+$text-color: #333;
+$quiet-color: #999;
+$loud-color: #434857;
+$heading-color: #000;
+$link-color: $text-color;
+$link-hover-color: saturate(#1997c6, 20%);
+$link-visited-color: $link-color;
+$base-font-family: 'Raleway', sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 300;
+$base-line-height: 1.4;
+$fixed-font-family: 'Andale Mono', AndaleMono, monospace;
+$fixed-font-size: 15px;
+$fixed-line-height: 1.2;
+$heading-font-family: 'Open Sans', sans-serif;
+$heading-font-weight: 700;
+$border-color: #434857;

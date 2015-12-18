@@ -1,0 +1,26 @@
+@include global-reset;
+*,
+*:hover,
+*:focus {
+    outline: 0;
+}
+button,
+input:not([type=radio]):not([type=checkbox]),
+select,
+textarea {
+    @include appearance(none);
+}
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+input[type="date"]::-webkit-input-placeholder {
+    visibility: hidden !important;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
