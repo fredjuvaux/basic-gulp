@@ -17,6 +17,8 @@ var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
+var spritesmith  = require('gulp.spritesmith');
+var notify       = require('gulp-notify');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -92,7 +94,9 @@ var cssTasks = function(filename) {
         includePaths: [
           './node_modules/compass-mixins/lib'
         ],
-        errLogToConsole: !enabled.failStyleTask
+        errLogToConsole: false
+      }).on('error', function(err) {
+        notify().write(err);
       }));
     })
     .pipe(concat, filename)
@@ -257,4 +261,14 @@ gulp.task('wiredep', function() {
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
+});
+
+gulp.task('sprites', function() {
+  var spriteData = gulp.src('assets/images/sprites/**/*.*').pipe(spritesmith({
+        imgName: 'sprite.png',
+        cssName: 'sprite.css',
+      }));
+
+  spriteData.img.pipe(gulp.dest('dist/images/')); // output path for the sprite
+  spriteData.css.pipe(gulp.dest('dist/styles/')); // output path for the CSS
 });
